@@ -123,11 +123,11 @@ namespace design_patterns_csharp
     }
 
     // Similar to the Decorator class
-    abstract class Decorator : LibraryItem
+    abstract class RealWorldDecorator : LibraryItem
     {
         protected LibraryItem m_librarItem;
 
-        public Decorator(LibraryItem item)
+        public RealWorldDecorator(LibraryItem item)
         {
             m_librarItem = item;
         }
@@ -139,7 +139,7 @@ namespace design_patterns_csharp
     }
 
     // Similar to the ConcreteDecorator class
-    class Borrowable : Decorator
+    class Borrowable : RealWorldDecorator
     {
         protected List<string> borrowers = new List<string>();
 

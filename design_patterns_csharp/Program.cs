@@ -1,4 +1,6 @@
-﻿#define _DECORATOR_PATTERN
+﻿//#define _DECORATOR_PATTERN
+//#define _ADAPTER_PATTERN
+#define _BRIDGE_PATTERN
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +39,27 @@ namespace design_patterns_csharp
             borrowViedo.BorrowItem("John");
             borrowViedo.BorrowItem("Smith");
             borrowViedo.Display();
+            Console.ReadKey();
+#endif
+#if _ADAPTER_PATTERN
+            Target target = new Adapter();
+            target.Request();
+
+            Compound compound = new Compound("Unknown");
+            compound.Display();
+
+            ComplexCompound complex = new ComplexCompound("h2o");
+            complex.Display();
+            Console.ReadKey();
+#endif
+#if _BRIDGE_PATTERN
+            Abstraction ab = new RefinedAbstraction();
+            ab.impl = new ConcreteImplementorA();
+            ab.Operation();
+
+            ab.impl = new ConcreteImplementorB();
+            ab.Operation();
+
             Console.ReadKey();
 #endif
         }

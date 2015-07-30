@@ -1,0 +1,4 @@
+Questions met:
+1. Except from the real-world example in Decorator.cs, what's the other usage??
+
+2.Adapter pattern, 感觉是为了保证类具有同样的接口，要引入新的类去做些不一样的事情。这个奇妙的地方在哪里呢？
