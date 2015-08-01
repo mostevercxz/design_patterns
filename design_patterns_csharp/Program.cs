@@ -1,6 +1,7 @@
 ﻿//#define _DECORATOR_PATTERN
 //#define _ADAPTER_PATTERN
-#define _BRIDGE_PATTERN
+//#define _BRIDGE_PATTERN
+#define _COMPOSITE_PATTERN
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -60,6 +61,35 @@ namespace design_patterns_csharp
             ab.impl = new ConcreteImplementorB();
             ab.Operation();
 
+            Customers cus = new Customers("root");
+            cus.data = new CustomerData();
+            cus.Show();
+            cus.Next();
+            cus.Show();
+            cus.Next();
+            cus.Show();
+            cus.Add("Another Customer");
+            cus.ShowAll();
+
+            Console.ReadKey();
+#endif
+#if _COMPOSITE_PATTERN
+            Composite root = new Composite("root");
+            root.Add(new Leaf("l Leaf"));
+            root.Add(new Leaf("r Leaf"));
+
+            Composite comp = new Composite("Compisite X");
+            comp.Add(new Leaf("Composite X L Leaf"));
+            comp.Add(new Leaf("Composite X R Leaf"));
+
+            root.Add(comp);
+            root.Add(new Leaf("m Leaf"));
+
+            Leaf leaf = new Leaf("Leaf D");
+            root.Add(leaf);
+            root.Remove(leaf);
+
+            root.Display(1);
             Console.ReadKey();
 #endif
         }
