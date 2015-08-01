@@ -10,7 +10,7 @@
 #define _OBSERVER_PATTERN
 #define _STATE_PATTERN
 #define _STRATEGY_PATTERN
-#define _FACTORY_PATTERN
+//#define _FACTORY_PATTERN
 #define _ABSTRACT_FACTORY_PATTERN
 using System;
 using System.Collections.Generic;
@@ -129,6 +129,33 @@ namespace design_patterns_csharp
 
             MathProxy mathProxy = new MathProxy();
             mathProxy.Add(4, 2);
+
+            Console.ReadKey();
+#endif
+#if _FACTORY_PATTERN
+            Creator[] creators = new Creator[2];
+            creators[0] = new ConcreteCreatorA();
+            creators[1] = new ConcreateCreatorB();
+
+            foreach(Creator crea in creators)
+            {
+                Product product = crea.FactoryMethod();
+                Console.WriteLine("Create {0}", product.GetType().Name);
+            }
+
+            Document[] docs = new Document[2];
+
+            docs[0] = new Resume();
+            docs[1] = new Report();
+
+            foreach(Document document in docs)
+            {
+                Console.WriteLine("\n" + document.GetType().Name + "----");
+                foreach(Page page in document.pages)
+                {
+                    Console.WriteLine("Page:" + page.GetType().Name);
+                }
+            }
 
             Console.ReadKey();
 #endif
