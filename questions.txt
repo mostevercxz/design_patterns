@@ -1,3 +1,10 @@
+Still need to be done:
+Factory Method
+Command
+Iterator
+Observer
+State
+
 Questions met:
 1. Except from the real-world example in Decorator.cs, what's the other usage??
 

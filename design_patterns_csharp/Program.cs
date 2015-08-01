@@ -1,7 +1,17 @@
 ﻿//#define _DECORATOR_PATTERN
 //#define _ADAPTER_PATTERN
 //#define _BRIDGE_PATTERN
-#define _COMPOSITE_PATTERN
+//#define _COMPOSITE_PATTERN
+//#define _FACADE_PATTERN
+//#define _FLY_WEIGHT_PATTERN
+//#define _PROXY_PATTERN
+#define _COMMAND_PATTERN
+#define _ITERATOR_PATTERN
+#define _OBSERVER_PATTERN
+#define _STATE_PATTERN
+#define _STRATEGY_PATTERN
+#define _FACTORY_PATTERN
+#define _ABSTRACT_FACTORY_PATTERN
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -90,6 +100,36 @@ namespace design_patterns_csharp
             root.Remove(leaf);
 
             root.Display(1);
+            Console.ReadKey();
+#endif
+#if _FACADE_PATTERN
+            Facade facade = new Facade();
+            facade.MethodA();
+            facade.MethodB();
+            Console.ReadKey();
+#endif
+#if _FLY_WEIGHT_PATTERN
+            int extrinsic_state = 22;
+            FlyweightFactory factory = new FlyweightFactory();
+
+            Flyweight fx = factory.GetFlyWeight("X");
+            fx.Operation(--extrinsic_state);
+
+            Flyweight fy = factory.GetFlyWeight("Y");
+            fy.Operation(--extrinsic_state);
+
+            UnsharedConcreteFlyweight fu = new UnsharedConcreteFlyweight();
+            fu.Operation(--extrinsic_state);
+
+            Console.ReadKey();
+#endif
+#if _PROXY_PATTERN
+            Proxy proxy = new Proxy();
+            proxy.Request();
+
+            MathProxy mathProxy = new MathProxy();
+            mathProxy.Add(4, 2);
+
             Console.ReadKey();
 #endif
         }

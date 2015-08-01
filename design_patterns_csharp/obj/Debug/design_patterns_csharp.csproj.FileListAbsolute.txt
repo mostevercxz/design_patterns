@@ -10,3 +10,9 @@ C:\Users\Xinzhen\Documents\GitHub\design_patterns\design_patterns_csharp\obj\Deb
 C:\Users\Xinzhen\Documents\GitHub\design_patterns\design_patterns_csharp\obj\Debug\design_patterns_csharp.csprojResolveAssemblyReference.cache
 C:\Users\Xinzhen\Documents\GitHub\design_patterns\design_patterns_csharp\bin\Debug\design_patterns_csharp.exe
 C:\Users\Xinzhen\Documents\GitHub\design_patterns\design_patterns_csharp\bin\Debug\design_patterns_csharp.pdb
+C:\Users\chenxinzhen\Documents\GitHub\design_patterns_csharp\design_patterns_csharp\bin\Debug\design_patterns_csharp.exe.config
+C:\Users\chenxinzhen\Documents\GitHub\design_patterns_csharp\design_patterns_csharp\obj\Debug\design_patterns_csharp.exe
+C:\Users\chenxinzhen\Documents\GitHub\design_patterns_csharp\design_patterns_csharp\obj\Debug\design_patterns_csharp.pdb
+C:\Users\chenxinzhen\Documents\GitHub\design_patterns_csharp\design_patterns_csharp\bin\Debug\design_patterns_csharp.exe
+C:\Users\chenxinzhen\Documents\GitHub\design_patterns_csharp\design_patterns_csharp\bin\Debug\design_patterns_csharp.pdb
+C:\Users\chenxinzhen\Documents\GitHub\design_patterns_csharp\design_patterns_csharp\obj\Debug\design_patterns_csharp.csprojResolveAssemblyReference.cache
