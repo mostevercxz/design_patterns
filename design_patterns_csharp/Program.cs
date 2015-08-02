@@ -6,7 +6,7 @@
 //#define _FLY_WEIGHT_PATTERN
 //#define _PROXY_PATTERN
 #define _COMMAND_PATTERN
-#define _ITERATOR_PATTERN
+//#define _ITERATOR_PATTERN
 #define _OBSERVER_PATTERN
 #define _STATE_PATTERN
 #define _STRATEGY_PATTERN
@@ -157,6 +157,35 @@ namespace design_patterns_csharp
                 }
             }
 
+            Console.ReadKey();
+#endif
+#if _ITERATOR_PATTERN
+            ConcreteAggregate agg = new ConcreteAggregate();
+            agg[0] = "Item0";
+            agg[1] = "Item1";
+
+            ConcreteIterator iter = new ConcreteIterator(agg);
+            object item = iter.First();
+            while(item != null)
+            {
+                Console.WriteLine(item);
+                item = iter.Next();
+            }
+
+            Console.ReadKey();
+#endif
+#if _OBSERVER_PATTERN
+            ConcreteSubject sub = new ConcreteSubject();
+            sub.Attach(new ConcreteObserver(sub, "XXX"));
+            sub.Attach(new ConcreteObserver(sub, "YYY"));
+
+            sub.state = "AAA";
+            sub.Notify();
+
+            IBM ibm = new IBM(120.00);
+            ibm.Attach(new Investor("Chen", ibm));
+            ibm.Attach(new Investor("Chen1", ibm));
+            ibm.stockPrice = 121.00;
             Console.ReadKey();
 #endif
         }

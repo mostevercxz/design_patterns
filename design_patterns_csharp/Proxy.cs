@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if _PROXY_PATTERN
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -76,3 +77,4 @@ namespace design_patterns_csharp
         }
     }
 }
+#endif
